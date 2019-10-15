@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PFGCheckEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Account" />
+    </Key>
+    <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateLastLogin" Type="DateTime" Precision="3" />
+    <Property Name="DateLastActivity" Type="DateTime" Precision="3" />
+    <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Ext" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="UserTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifyID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="PFGCheckEEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.Users" />
+  </EntityContainer>
+</Schema>

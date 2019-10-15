@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookingCarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Account" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="10" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="DateLastLogin" Type="datetime" />
+    <Property Name="DateLastActivity" Type="datetime" />
+    <Property Name="IsEnabled" Type="bit" />
+    <Property Name="IsActivated" Type="bit" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Ext" Type="nvarchar" MaxLength="6" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="20" />
+    <Property Name="Category" Type="bit" />
+  </EntityType>
+  <EntityType Name="Version">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApkName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VerCode" Type="int" Nullable="false" />
+    <Property Name="ReleaseNote" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="IsForceUpdate" Type="bit" Nullable="false" />
+    <Property Name="DateReleased" Type="datetime" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BookingCarModelStoreContainer">
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Version" EntityType="Self.Version" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

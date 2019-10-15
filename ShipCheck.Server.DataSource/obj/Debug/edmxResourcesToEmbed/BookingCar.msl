@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BookingCarModelStoreContainer" CdmEntityContainer="BookingCarEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BookingCarModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateLastLogin" ColumnName="DateLastLogin" />
+          <ScalarProperty Name="DateLastActivity" ColumnName="DateLastActivity" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+          <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Ext" ColumnName="Ext" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Version">
+      <EntityTypeMapping TypeName="BookingCarModel.Version">
+        <MappingFragment StoreEntitySet="Version">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateReleased" ColumnName="DateReleased" />
+          <ScalarProperty Name="IsForceUpdate" ColumnName="IsForceUpdate" />
+          <ScalarProperty Name="ReleaseNote" ColumnName="ReleaseNote" />
+          <ScalarProperty Name="VerCode" ColumnName="VerCode" />
+          <ScalarProperty Name="VerName" ColumnName="VerName" />
+          <ScalarProperty Name="ApkName" ColumnName="ApkName" />
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

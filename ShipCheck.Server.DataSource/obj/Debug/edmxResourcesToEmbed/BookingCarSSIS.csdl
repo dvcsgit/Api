@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookingCarSSISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="v28caxrf_s2">
+    <Key>
+      <PropertyRef Name="ROWIdx" />
+    </Key>
+    <Property Name="CUFN" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="ODNO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UNPKWGT" Type="Decimal" Precision="7" Scale="3" />
+    <Property Name="PDID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="CLHRLNO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="L" Type="Int32" />
+    <Property Name="GRSWGT" Type="Decimal" Precision="7" Scale="3" />
+    <Property Name="ROWIdx" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="SHA1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ateModified" Type="DateTime" Precision="3" />
+    <Property Name="Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="PrintTime" Type="DateTime" Precision="3" />
+    <Property Name="CheckAccount" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CheckTime" Type="DateTime" Precision="3" />
+    <Property Name="OUTMDAT" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="V28EFQ7J">
+    <Key>
+      <PropertyRef Name="ROWIdx" />
+    </Key>
+    <Property Name="CUNO" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="OMNO" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="KD" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="IKPCNO" Type="String" MaxLength="24" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="L" Type="Decimal" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="NETWGT" Type="Int32" />
+    <Property Name="ROWIdx" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="SHA1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateModified" Type="DateTime" Precision="3" />
+    <Property Name="Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="PrintTime" Type="DateTime" Precision="3" />
+    <Property Name="CheckAccount" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CheckTime" Type="DateTime" Precision="3" />
+    <Property Name="IKDAT" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="BookingCarSSISEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="v28caxrf_s2" EntityType="Self.v28caxrf_s2" />
+    <EntitySet Name="V28EFQ7J" EntityType="Self.V28EFQ7J" />
+  </EntityContainer>
+</Schema>

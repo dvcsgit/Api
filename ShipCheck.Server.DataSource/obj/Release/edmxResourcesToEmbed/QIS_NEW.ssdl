@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QIS_NEWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_II_HANG_SILK_DETAIL">
+    <Key>
+      <PropertyRef Name="UP_SILK_NO" />
+      <PropertyRef Name="RGE_FLAG_NO" />
+    </Key>
+    <Property Name="UP_SILK_NO" Type="nvarchar" MaxLength="17" Nullable="false" />
+    <Property Name="RGE_FLAG_NO" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CAR_NO" Type="nvarchar" MaxLength="4" />
+    <Property Name="PROD_NO" Type="nvarchar" MaxLength="10" />
+    <Property Name="CREATOR_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="CREATE_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="MODIFIER_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="MODIFY_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="CHECK_NO" Type="varchar" MaxLength="17" />
+  </EntityType>
+  <EntityType Name="T_II_HANG_SILK_MASTER">
+    <Key>
+      <PropertyRef Name="UP_SILK_NO" />
+    </Key>
+    <Property Name="UP_SILK_NO" Type="nvarchar" MaxLength="17" Nullable="false" />
+    <Property Name="TWISTING_MACH_NO" Type="nvarchar" MaxLength="4" />
+    <Property Name="FALL_SERIAL" Type="nvarchar" MaxLength="3" />
+    <Property Name="FAC_ID" Type="nvarchar" MaxLength="1" />
+    <Property Name="OLD_TWISTING_MACH_NO" Type="nvarchar" MaxLength="4" />
+    <Property Name="CREATOR_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="CREATE_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="MODIFIER_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="MODIFY_TIME" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="T_II_PROD_TIME">
+    <Key>
+      <PropertyRef Name="FAC_ID" />
+      <PropertyRef Name="PROD_NO" />
+    </Key>
+    <Property Name="FAC_ID" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PROD_NO" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="PROD_TIME" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_II_START_NEW">
+    <Key>
+      <PropertyRef Name="FAC_ID" />
+      <PropertyRef Name="TWISTING_MACH_NO" />
+      <PropertyRef Name="START_NO" />
+    </Key>
+    <Property Name="FAC_ID" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="TWISTING_MACH_NO" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="START_TM" Type="nvarchar" MaxLength="12" />
+    <Property Name="CREATOR_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="CREATE_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="MODIFIER_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="MODIFY_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="START_NO" Type="varchar" MaxLength="17" Nullable="false" />
+    <Property Name="UP_SILK_NO" Type="varchar" MaxLength="17" />
+    <Property Name="FALL_SERIAL" Type="nvarchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="T_III_MACHINE_CHECK">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FAC_ID" Type="nvarchar" MaxLength="1" />
+    <Property Name="TWISTING_MACH_NO" Type="nvarchar" MaxLength="4" />
+    <Property Name="RGE_FLAG_NO" Type="nvarchar" MaxLength="2" />
+    <Property Name="EXCEPTION_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="EXCEPTION_TYPE" Type="nvarchar" MaxLength="1" />
+    <Property Name="EXCEPTION_ID" Type="nvarchar" MaxLength="3" />
+    <Property Name="EXCEPTION_NAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="REPAIR_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="REPAIR_PERSON" Type="nvarchar" MaxLength="20" />
+    <Property Name="CONFIRM_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="CONFIRM_PERSON" Type="nvarchar" MaxLength="20" />
+    <Property Name="TRANS_TIME" Type="nvarchar" MaxLength="15" />
+    <Property Name="TRANS_PERSON" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_III_MACHINE_EXCEPTION">
+    <Key>
+      <PropertyRef Name="EXCEPTION_ID" />
+    </Key>
+    <Property Name="EXCEPTION_ID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="EXCEPTION_NAME" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CREATE_TIME" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="MODIFIER_ID" Type="varchar" MaxLength="20" />
+    <Property Name="MODIFY_TIME" Type="varchar" MaxLength="15" />
+    <Property Name="EXCEPTION_COUNT" Type="int" />
+    <Property Name="SERIAL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CREATOR" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_III_PROD_SILK_LEN_TIME">
+    <Key>
+      <PropertyRef Name="FAC_ID" />
+      <PropertyRef Name="PROD_SPEC" />
+    </Key>
+    <Property Name="FAC_ID" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PROD_SPEC" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SILK_LENGTH" Type="int" Nullable="false" />
+    <Property Name="SILK_MINS" Type="int" Nullable="false" />
+    <Property Name="CREATOR_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CREATE_TIME" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="MODIFIER_ID" Type="varchar" MaxLength="20" />
+    <Property Name="MODIFY_TIME" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="T_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="USER_NAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="CLS_ID" Type="varchar" MaxLength="1" />
+    <Property Name="PWD" Type="varchar" MaxLength="20" />
+    <Property Name="NOTES_ID" Type="varchar" MaxLength="10" />
+    <Property Name="CREATOR_ID" Type="varchar" MaxLength="20" />
+    <Property Name="CREATE_TIME" Type="varchar" MaxLength="15" />
+    <Property Name="MODIFIER_ID" Type="varchar" MaxLength="20" />
+    <Property Name="MODIFY_TIME" Type="varchar" MaxLength="15" />
+    <Property Name="FAC_ID" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Version">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApkName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VerCode" Type="int" Nullable="false" />
+    <Property Name="ReleaseNote" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="IsForceUpdate" Type="bit" Nullable="false" />
+    <Property Name="DateReleased" Type="datetime" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QIS_NEWModelStoreContainer">
+    <EntitySet Name="T_II_HANG_SILK_DETAIL" EntityType="Self.T_II_HANG_SILK_DETAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_II_HANG_SILK_MASTER" EntityType="Self.T_II_HANG_SILK_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_II_PROD_TIME" EntityType="Self.T_II_PROD_TIME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_II_START_NEW" EntityType="Self.T_II_START_NEW" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_III_MACHINE_CHECK" EntityType="Self.T_III_MACHINE_CHECK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_III_MACHINE_EXCEPTION" EntityType="Self.T_III_MACHINE_EXCEPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_III_PROD_SILK_LEN_TIME" EntityType="Self.T_III_PROD_SILK_LEN_TIME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_USER" EntityType="Self.T_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Version" EntityType="Self.Version" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

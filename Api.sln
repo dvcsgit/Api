@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Site", "ShipCheck.Server.Web\Site.csproj", "{3A385C3F-64E6-41A7-B979-2BB2A98340B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSource", "ShipCheck.Server.DataSource\DataSource.csproj", "{EBA9373F-53C2-4BD8-AA74-42ECE9AE4934}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A385C3F-64E6-41A7-B979-2BB2A98340B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A385C3F-64E6-41A7-B979-2BB2A98340B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A385C3F-64E6-41A7-B979-2BB2A98340B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A385C3F-64E6-41A7-B979-2BB2A98340B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA9373F-53C2-4BD8-AA74-42ECE9AE4934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA9373F-53C2-4BD8-AA74-42ECE9AE4934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA9373F-53C2-4BD8-AA74-42ECE9AE4934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA9373F-53C2-4BD8-AA74-42ECE9AE4934}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1AA5F6B-0D51-4B1F-9291-4C93CA3B881D}
+	EndGlobalSection
+EndGlobal

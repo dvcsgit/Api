@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BookingCarSSISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="v28caxrf_s2">
+          <Key>
+            <PropertyRef Name="ROWIdx" />
+          </Key>
+          <Property Name="CUFN" Type="nvarchar" MaxLength="90" />
+          <Property Name="ODNO" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="UNPKWGT" Type="numeric" Precision="7" Scale="3" />
+          <Property Name="PDID" Type="nvarchar" MaxLength="5" />
+          <Property Name="CLHRLNO" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="L" Type="int" />
+          <Property Name="GRSWGT" Type="numeric" Precision="7" Scale="3" />
+          <Property Name="ROWIdx" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="SHA1" Type="nvarchar" MaxLength="100" />
+          <Property Name="ateModified" Type="datetime" />
+          <Property Name="Flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="PrintTime" Type="datetime" />
+          <Property Name="CheckAccount" Type="nvarchar" MaxLength="10" />
+          <Property Name="CheckTime" Type="datetime" />
+          <Property Name="OUTMDAT" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="V28EFQ7J">
+          <Key>
+            <PropertyRef Name="ROWIdx" />
+          </Key>
+          <Property Name="CUNO" Type="nvarchar" MaxLength="4000" />
+          <Property Name="OMNO" Type="nvarchar" MaxLength="24" />
+          <Property Name="KD" Type="nvarchar" MaxLength="90" />
+          <Property Name="SPEC" Type="nvarchar" MaxLength="4000" />
+          <Property Name="IKPCNO" Type="nvarchar" MaxLength="24" Nullable="false" />
+          <Property Name="L" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+          <Property Name="NETWGT" Type="int" />
+          <Property Name="ROWIdx" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="SHA1" Type="nvarchar" MaxLength="100" />
+          <Property Name="DateModified" Type="datetime" />
+          <Property Name="Flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="PrintTime" Type="datetime" />
+          <Property Name="CheckAccount" Type="nvarchar" MaxLength="10" />
+          <Property Name="CheckTime" Type="datetime" />
+          <Property Name="IKDAT" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityContainer Name="BookingCarSSISModelStoreContainer">
+          <EntitySet Name="v28caxrf_s2" EntityType="Self.v28caxrf_s2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="V28EFQ7J" EntityType="Self.V28EFQ7J" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BookingCarSSISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="v28caxrf_s2">
+          <Key>
+            <PropertyRef Name="ROWIdx" />
+          </Key>
+          <Property Name="CUFN" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+          <Property Name="ODNO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UNPKWGT" Type="Decimal" Precision="7" Scale="3" />
+          <Property Name="PDID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="CLHRLNO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="L" Type="Int32" />
+          <Property Name="GRSWGT" Type="Decimal" Precision="7" Scale="3" />
+          <Property Name="ROWIdx" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="DateTime" Precision="3" />
+          <Property Name="SHA1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ateModified" Type="DateTime" Precision="3" />
+          <Property Name="Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="PrintTime" Type="DateTime" Precision="3" />
+          <Property Name="CheckAccount" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CheckTime" Type="DateTime" Precision="3" />
+          <Property Name="OUTMDAT" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="V28EFQ7J">
+          <Key>
+            <PropertyRef Name="ROWIdx" />
+          </Key>
+          <Property Name="CUNO" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="OMNO" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="KD" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+          <Property Name="SPEC" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="IKPCNO" Type="String" MaxLength="24" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="L" Type="Decimal" Precision="12" Scale="3" Nullable="false" />
+          <Property Name="NETWGT" Type="Int32" />
+          <Property Name="ROWIdx" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="DateTime" Precision="3" />
+          <Property Name="SHA1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DateModified" Type="DateTime" Precision="3" />
+          <Property Name="Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="PrintTime" Type="DateTime" Precision="3" />
+          <Property Name="CheckAccount" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CheckTime" Type="DateTime" Precision="3" />
+          <Property Name="IKDAT" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="BookingCarSSISEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="v28caxrf_s2" EntityType="Self.v28caxrf_s2" />
+          <EntitySet Name="V28EFQ7J" EntityType="Self.V28EFQ7J" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BookingCarSSISModelStoreContainer" CdmEntityContainer="BookingCarSSISEntities">
+          <EntitySetMapping Name="v28caxrf_s2">
+            <EntityTypeMapping TypeName="BookingCarSSISModel.v28caxrf_s2">
+              <MappingFragment StoreEntitySet="v28caxrf_s2">
+                <ScalarProperty Name="CUFN" ColumnName="CUFN" />
+                <ScalarProperty Name="ODNO" ColumnName="ODNO" />
+                <ScalarProperty Name="UNPKWGT" ColumnName="UNPKWGT" />
+                <ScalarProperty Name="PDID" ColumnName="PDID" />
+                <ScalarProperty Name="CLHRLNO" ColumnName="CLHRLNO" />
+                <ScalarProperty Name="L" ColumnName="L" />
+                <ScalarProperty Name="GRSWGT" ColumnName="GRSWGT" />
+                <ScalarProperty Name="ROWIdx" ColumnName="ROWIdx" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="SHA1" ColumnName="SHA1" />
+                <ScalarProperty Name="ateModified" ColumnName="ateModified" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="PrintTime" ColumnName="PrintTime" />
+                <ScalarProperty Name="CheckAccount" ColumnName="CheckAccount" />
+                <ScalarProperty Name="CheckTime" ColumnName="CheckTime" />
+                <ScalarProperty Name="OUTMDAT" ColumnName="OUTMDAT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V28EFQ7J">
+            <EntityTypeMapping TypeName="BookingCarSSISModel.V28EFQ7J">
+              <MappingFragment StoreEntitySet="V28EFQ7J">
+                <ScalarProperty Name="CUNO" ColumnName="CUNO" />
+                <ScalarProperty Name="OMNO" ColumnName="OMNO" />
+                <ScalarProperty Name="KD" ColumnName="KD" />
+                <ScalarProperty Name="SPEC" ColumnName="SPEC" />
+                <ScalarProperty Name="IKPCNO" ColumnName="IKPCNO" />
+                <ScalarProperty Name="L" ColumnName="L" />
+                <ScalarProperty Name="NETWGT" ColumnName="NETWGT" />
+                <ScalarProperty Name="ROWIdx" ColumnName="ROWIdx" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="SHA1" ColumnName="SHA1" />
+                <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="PrintTime" ColumnName="PrintTime" />
+                <ScalarProperty Name="CheckAccount" ColumnName="CheckAccount" />
+                <ScalarProperty Name="CheckTime" ColumnName="CheckTime" />
+                <ScalarProperty Name="IKDAT" ColumnName="IKDAT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

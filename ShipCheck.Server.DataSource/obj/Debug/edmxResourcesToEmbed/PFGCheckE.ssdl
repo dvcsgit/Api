@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PFGCheckEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Account" />
+    </Key>
+    <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="DateLastLogin" Type="datetime" />
+    <Property Name="DateLastActivity" Type="datetime" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Ext" Type="nvarchar" MaxLength="6" />
+    <Property Name="UserTitle" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreateID" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="ModifyID" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModifyTime" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="PFGCheckEModelStoreContainer">
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

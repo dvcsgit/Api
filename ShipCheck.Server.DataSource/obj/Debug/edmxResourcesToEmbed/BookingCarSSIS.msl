@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BookingCarSSISModelStoreContainer" CdmEntityContainer="BookingCarSSISEntities">
+    <EntitySetMapping Name="v28caxrf_s2">
+      <EntityTypeMapping TypeName="BookingCarSSISModel.v28caxrf_s2">
+        <MappingFragment StoreEntitySet="v28caxrf_s2">
+          <ScalarProperty Name="CUFN" ColumnName="CUFN" />
+          <ScalarProperty Name="ODNO" ColumnName="ODNO" />
+          <ScalarProperty Name="UNPKWGT" ColumnName="UNPKWGT" />
+          <ScalarProperty Name="PDID" ColumnName="PDID" />
+          <ScalarProperty Name="CLHRLNO" ColumnName="CLHRLNO" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="GRSWGT" ColumnName="GRSWGT" />
+          <ScalarProperty Name="ROWIdx" ColumnName="ROWIdx" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SHA1" ColumnName="SHA1" />
+          <ScalarProperty Name="ateModified" ColumnName="ateModified" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="PrintTime" ColumnName="PrintTime" />
+          <ScalarProperty Name="CheckAccount" ColumnName="CheckAccount" />
+          <ScalarProperty Name="CheckTime" ColumnName="CheckTime" />
+          <ScalarProperty Name="OUTMDAT" ColumnName="OUTMDAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V28EFQ7J">
+      <EntityTypeMapping TypeName="BookingCarSSISModel.V28EFQ7J">
+        <MappingFragment StoreEntitySet="V28EFQ7J">
+          <ScalarProperty Name="CUNO" ColumnName="CUNO" />
+          <ScalarProperty Name="OMNO" ColumnName="OMNO" />
+          <ScalarProperty Name="KD" ColumnName="KD" />
+          <ScalarProperty Name="SPEC" ColumnName="SPEC" />
+          <ScalarProperty Name="IKPCNO" ColumnName="IKPCNO" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="NETWGT" ColumnName="NETWGT" />
+          <ScalarProperty Name="ROWIdx" ColumnName="ROWIdx" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SHA1" ColumnName="SHA1" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="PrintTime" ColumnName="PrintTime" />
+          <ScalarProperty Name="CheckAccount" ColumnName="CheckAccount" />
+          <ScalarProperty Name="CheckTime" ColumnName="CheckTime" />
+          <ScalarProperty Name="IKDAT" ColumnName="IKDAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

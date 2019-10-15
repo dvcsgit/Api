@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookingCarSSISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="v28caxrf_s2">
+    <Key>
+      <PropertyRef Name="ROWIdx" />
+    </Key>
+    <Property Name="CUFN" Type="nvarchar" MaxLength="90" />
+    <Property Name="ODNO" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="UNPKWGT" Type="numeric" Precision="7" Scale="3" />
+    <Property Name="PDID" Type="nvarchar" MaxLength="5" />
+    <Property Name="CLHRLNO" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="L" Type="int" />
+    <Property Name="GRSWGT" Type="numeric" Precision="7" Scale="3" />
+    <Property Name="ROWIdx" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="SHA1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ateModified" Type="datetime" />
+    <Property Name="Flag" Type="nvarchar" MaxLength="1" />
+    <Property Name="PrintTime" Type="datetime" />
+    <Property Name="CheckAccount" Type="nvarchar" MaxLength="10" />
+    <Property Name="CheckTime" Type="datetime" />
+    <Property Name="OUTMDAT" Type="nvarchar" MaxLength="7" />
+  </EntityType>
+  <EntityType Name="V28EFQ7J">
+    <Key>
+      <PropertyRef Name="ROWIdx" />
+    </Key>
+    <Property Name="CUNO" Type="nvarchar" MaxLength="4000" />
+    <Property Name="OMNO" Type="nvarchar" MaxLength="24" />
+    <Property Name="KD" Type="nvarchar" MaxLength="90" />
+    <Property Name="SPEC" Type="nvarchar" MaxLength="4000" />
+    <Property Name="IKPCNO" Type="nvarchar" MaxLength="24" Nullable="false" />
+    <Property Name="L" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="NETWGT" Type="int" />
+    <Property Name="ROWIdx" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="SHA1" Type="nvarchar" MaxLength="100" />
+    <Property Name="DateModified" Type="datetime" />
+    <Property Name="Flag" Type="nvarchar" MaxLength="1" />
+    <Property Name="PrintTime" Type="datetime" />
+    <Property Name="CheckAccount" Type="nvarchar" MaxLength="10" />
+    <Property Name="CheckTime" Type="datetime" />
+    <Property Name="IKDAT" Type="nvarchar" MaxLength="7" />
+  </EntityType>
+  <EntityContainer Name="BookingCarSSISModelStoreContainer">
+    <EntitySet Name="v28caxrf_s2" EntityType="Self.v28caxrf_s2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="V28EFQ7J" EntityType="Self.V28EFQ7J" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

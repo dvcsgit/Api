@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PFGCheckEModelStoreContainer" CdmEntityContainer="PFGCheckEEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PFGCheckEModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="DateLastLogin" ColumnName="DateLastLogin" />
+          <ScalarProperty Name="DateLastActivity" ColumnName="DateLastActivity" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Ext" ColumnName="Ext" />
+          <ScalarProperty Name="UserTitle" ColumnName="UserTitle" />
+          <ScalarProperty Name="CreateID" ColumnName="CreateID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ModifyID" ColumnName="ModifyID" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

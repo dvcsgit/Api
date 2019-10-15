@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PFGCheckEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Account" />
+          </Key>
+          <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="DateLastLogin" Type="datetime" />
+          <Property Name="DateLastActivity" Type="datetime" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+          <Property Name="Ext" Type="nvarchar" MaxLength="6" />
+          <Property Name="UserTitle" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateID" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="ModifyID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="PFGCheckEModelStoreContainer">
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PFGCheckEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Account" />
+          </Key>
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateLastLogin" Type="DateTime" Precision="3" />
+          <Property Name="DateLastActivity" Type="DateTime" Precision="3" />
+          <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ext" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="UserTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="PFGCheckEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PFGCheckEModelStoreContainer" CdmEntityContainer="PFGCheckEEntities">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="PFGCheckEModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="DateLastLogin" ColumnName="DateLastLogin" />
+                <ScalarProperty Name="DateLastActivity" ColumnName="DateLastActivity" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Ext" ColumnName="Ext" />
+                <ScalarProperty Name="UserTitle" ColumnName="UserTitle" />
+                <ScalarProperty Name="CreateID" ColumnName="CreateID" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="ModifyID" ColumnName="ModifyID" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

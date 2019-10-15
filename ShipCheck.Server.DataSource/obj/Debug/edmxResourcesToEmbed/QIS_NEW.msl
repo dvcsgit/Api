@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QIS_NEWModelStoreContainer" CdmEntityContainer="QIS_NEWEntities">
+    <EntitySetMapping Name="T_II_PROD_TIME">
+      <EntityTypeMapping TypeName="QIS_NEWModel.T_II_PROD_TIME">
+        <MappingFragment StoreEntitySet="T_II_PROD_TIME">
+          <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+          <ScalarProperty Name="PROD_NO" ColumnName="PROD_NO" />
+          <ScalarProperty Name="PROD_TIME" ColumnName="PROD_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_II_START_NEW">
+      <EntityTypeMapping TypeName="QIS_NEWModel.T_II_START_NEW">
+        <MappingFragment StoreEntitySet="T_II_START_NEW">
+          <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+          <ScalarProperty Name="TWISTING_MACH_NO" ColumnName="TWISTING_MACH_NO" />
+          <ScalarProperty Name="START_TM" ColumnName="START_TM" />
+          <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+          <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+          <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+          <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+          <ScalarProperty Name="START_NO" ColumnName="START_NO" />
+          <ScalarProperty Name="UP_SILK_NO" ColumnName="UP_SILK_NO" />
+          <ScalarProperty Name="FALL_SERIAL" ColumnName="FALL_SERIAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_USER">
+      <EntityTypeMapping TypeName="QIS_NEWModel.T_USER">
+        <MappingFragment StoreEntitySet="T_USER">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="CLS_ID" ColumnName="CLS_ID" />
+          <ScalarProperty Name="PWD" ColumnName="PWD" />
+          <ScalarProperty Name="NOTES_ID" ColumnName="NOTES_ID" />
+          <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+          <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+          <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+          <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+          <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_II_HANG_SILK_DETAIL">
+      <EntityTypeMapping TypeName="QIS_NEWModel.T_II_HANG_SILK_DETAIL">
+        <MappingFragment StoreEntitySet="T_II_HANG_SILK_DETAIL">
+          <ScalarProperty Name="CHECK_NO" ColumnName="CHECK_NO" />
+          <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+          <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+          <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+          <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+          <ScalarProperty Name="PROD_NO" ColumnName="PROD_NO" />
+          <ScalarProperty Name="CAR_NO" ColumnName="CAR_NO" />
+          <ScalarProperty Name="RGE_FLAG_NO" ColumnName="RGE_FLAG_NO" />
+          <ScalarProperty Name="UP_SILK_NO" ColumnName="UP_SILK_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_II_HANG_SILK_MASTER">
+      <EntityTypeMapping TypeName="QIS_NEWModel.T_II_HANG_SILK_MASTER">
+        <MappingFragment StoreEntitySet="T_II_HANG_SILK_MASTER">
+          <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+          <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+          <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+          <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+          <ScalarProperty Name="OLD_TWISTING_MACH_NO" ColumnName="OLD_TWISTING_MACH_NO" />
+          <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+          <ScalarProperty Name="FALL_SERIAL" ColumnName="FALL_SERIAL" />
+          <ScalarProperty Name="TWISTING_MACH_NO" ColumnName="TWISTING_MACH_NO" />
+          <ScalarProperty Name="UP_SILK_NO" ColumnName="UP_SILK_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_III_PROD_SILK_LEN_TIME">
+      <EntityTypeMapping TypeName="QIS_NEWModel.T_III_PROD_SILK_LEN_TIME">
+        <MappingFragment StoreEntitySet="T_III_PROD_SILK_LEN_TIME">
+          <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+          <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+          <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+          <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+          <ScalarProperty Name="SILK_MINS" ColumnName="SILK_MINS" />
+          <ScalarProperty Name="SILK_LENGTH" ColumnName="SILK_LENGTH" />
+          <ScalarProperty Name="PROD_SPEC" ColumnName="PROD_SPEC" />
+          <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_III_MACHINE_CHECK">
+      <EntityTypeMapping TypeName="QIS_NEWModel.T_III_MACHINE_CHECK">
+        <MappingFragment StoreEntitySet="T_III_MACHINE_CHECK">
+          <ScalarProperty Name="TRANS_PERSON" ColumnName="TRANS_PERSON" />
+          <ScalarProperty Name="TRANS_TIME" ColumnName="TRANS_TIME" />
+          <ScalarProperty Name="CONFIRM_PERSON" ColumnName="CONFIRM_PERSON" />
+          <ScalarProperty Name="CONFIRM_TIME" ColumnName="CONFIRM_TIME" />
+          <ScalarProperty Name="REPAIR_PERSON" ColumnName="REPAIR_PERSON" />
+          <ScalarProperty Name="REPAIR_TIME" ColumnName="REPAIR_TIME" />
+          <ScalarProperty Name="EXCEPTION_NAME" ColumnName="EXCEPTION_NAME" />
+          <ScalarProperty Name="EXCEPTION_ID" ColumnName="EXCEPTION_ID" />
+          <ScalarProperty Name="EXCEPTION_TYPE" ColumnName="EXCEPTION_TYPE" />
+          <ScalarProperty Name="EXCEPTION_TIME" ColumnName="EXCEPTION_TIME" />
+          <ScalarProperty Name="RGE_FLAG_NO" ColumnName="RGE_FLAG_NO" />
+          <ScalarProperty Name="TWISTING_MACH_NO" ColumnName="TWISTING_MACH_NO" />
+          <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_III_MACHINE_EXCEPTION">
+      <EntityTypeMapping TypeName="QIS_NEWModel.T_III_MACHINE_EXCEPTION">
+        <MappingFragment StoreEntitySet="T_III_MACHINE_EXCEPTION">
+          <ScalarProperty Name="CREATOR" ColumnName="CREATOR" />
+          <ScalarProperty Name="SERIAL_ID" ColumnName="SERIAL_ID" />
+          <ScalarProperty Name="EXCEPTION_COUNT" ColumnName="EXCEPTION_COUNT" />
+          <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+          <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+          <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+          <ScalarProperty Name="EXCEPTION_NAME" ColumnName="EXCEPTION_NAME" />
+          <ScalarProperty Name="EXCEPTION_ID" ColumnName="EXCEPTION_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Version">
+      <EntityTypeMapping TypeName="QIS_NEWModel.Version">
+        <MappingFragment StoreEntitySet="Version">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateReleased" ColumnName="DateReleased" />
+          <ScalarProperty Name="IsForceUpdate" ColumnName="IsForceUpdate" />
+          <ScalarProperty Name="ReleaseNote" ColumnName="ReleaseNote" />
+          <ScalarProperty Name="VerCode" ColumnName="VerCode" />
+          <ScalarProperty Name="VerName" ColumnName="VerName" />
+          <ScalarProperty Name="ApkName" ColumnName="ApkName" />
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

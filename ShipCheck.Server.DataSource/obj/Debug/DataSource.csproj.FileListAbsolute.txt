@@ -1,0 +1,13 @@
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\bin\Debug\ShipCheck.Server.DataSource.dll.config
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\bin\Debug\ShipCheck.Server.DataSource.dll
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\bin\Debug\ShipCheck.Server.DataSource.pdb
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\bin\Debug\EntityFramework.dll
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\bin\Debug\EntityFramework.SqlServer.dll
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\bin\Debug\LinqKit.dll
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\bin\Debug\EntityFramework.xml
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\bin\Debug\EntityFramework.SqlServer.xml
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\obj\Debug\DataSource.csprojAssemblyReference.cache
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\obj\Debug\DataSource.csproj.CoreCompileInputs.cache
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\obj\Debug\DataSource.csproj.CopyComplete
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\obj\Debug\ShipCheck.Server.DataSource.dll
+E:\Workspace\API\Api\ShipCheck.Server.DataSource\obj\Debug\ShipCheck.Server.DataSource.pdb

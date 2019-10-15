@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QIS_NEWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_II_HANG_SILK_DETAIL">
+          <Key>
+            <PropertyRef Name="UP_SILK_NO" />
+            <PropertyRef Name="RGE_FLAG_NO" />
+          </Key>
+          <Property Name="UP_SILK_NO" Type="nvarchar" MaxLength="17" Nullable="false" />
+          <Property Name="RGE_FLAG_NO" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="CAR_NO" Type="nvarchar" MaxLength="4" />
+          <Property Name="PROD_NO" Type="nvarchar" MaxLength="10" />
+          <Property Name="CREATOR_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="CREATE_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="MODIFIER_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="MODIFY_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="CHECK_NO" Type="varchar" MaxLength="17" />
+        </EntityType>
+        <EntityType Name="T_II_HANG_SILK_MASTER">
+          <Key>
+            <PropertyRef Name="UP_SILK_NO" />
+          </Key>
+          <Property Name="UP_SILK_NO" Type="nvarchar" MaxLength="17" Nullable="false" />
+          <Property Name="TWISTING_MACH_NO" Type="nvarchar" MaxLength="4" />
+          <Property Name="FALL_SERIAL" Type="nvarchar" MaxLength="3" />
+          <Property Name="FAC_ID" Type="nvarchar" MaxLength="1" />
+          <Property Name="OLD_TWISTING_MACH_NO" Type="nvarchar" MaxLength="4" />
+          <Property Name="CREATOR_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="CREATE_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="MODIFIER_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="MODIFY_TIME" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="T_II_PROD_TIME">
+          <Key>
+            <PropertyRef Name="FAC_ID" />
+            <PropertyRef Name="PROD_NO" />
+          </Key>
+          <Property Name="FAC_ID" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="PROD_NO" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="PROD_TIME" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_II_START_NEW">
+          <Key>
+            <PropertyRef Name="FAC_ID" />
+            <PropertyRef Name="TWISTING_MACH_NO" />
+            <PropertyRef Name="START_NO" />
+          </Key>
+          <Property Name="FAC_ID" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="TWISTING_MACH_NO" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="START_TM" Type="nvarchar" MaxLength="12" />
+          <Property Name="CREATOR_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="CREATE_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="MODIFIER_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="MODIFY_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="START_NO" Type="varchar" MaxLength="17" Nullable="false" />
+          <Property Name="UP_SILK_NO" Type="varchar" MaxLength="17" />
+          <Property Name="FALL_SERIAL" Type="nvarchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="T_III_MACHINE_CHECK">
+          <Key>
+            <PropertyRef Name="SEQ_NO" />
+          </Key>
+          <Property Name="SEQ_NO" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FAC_ID" Type="nvarchar" MaxLength="1" />
+          <Property Name="TWISTING_MACH_NO" Type="nvarchar" MaxLength="4" />
+          <Property Name="RGE_FLAG_NO" Type="nvarchar" MaxLength="2" />
+          <Property Name="EXCEPTION_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="EXCEPTION_TYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="EXCEPTION_ID" Type="nvarchar" MaxLength="3" />
+          <Property Name="EXCEPTION_NAME" Type="nvarchar" MaxLength="20" />
+          <Property Name="REPAIR_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="REPAIR_PERSON" Type="nvarchar" MaxLength="20" />
+          <Property Name="CONFIRM_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="CONFIRM_PERSON" Type="nvarchar" MaxLength="20" />
+          <Property Name="TRANS_TIME" Type="nvarchar" MaxLength="15" />
+          <Property Name="TRANS_PERSON" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="T_III_MACHINE_EXCEPTION">
+          <Key>
+            <PropertyRef Name="EXCEPTION_ID" />
+          </Key>
+          <Property Name="EXCEPTION_ID" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="EXCEPTION_NAME" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CREATE_TIME" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="MODIFIER_ID" Type="varchar" MaxLength="20" />
+          <Property Name="MODIFY_TIME" Type="varchar" MaxLength="15" />
+          <Property Name="EXCEPTION_COUNT" Type="int" />
+          <Property Name="SERIAL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CREATOR" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="T_III_PROD_SILK_LEN_TIME">
+          <Key>
+            <PropertyRef Name="FAC_ID" />
+            <PropertyRef Name="PROD_SPEC" />
+          </Key>
+          <Property Name="FAC_ID" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="PROD_SPEC" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="SILK_LENGTH" Type="int" Nullable="false" />
+          <Property Name="SILK_MINS" Type="int" Nullable="false" />
+          <Property Name="CREATOR_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CREATE_TIME" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="MODIFIER_ID" Type="varchar" MaxLength="20" />
+          <Property Name="MODIFY_TIME" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="T_USER">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="USER_NAME" Type="nvarchar" MaxLength="20" />
+          <Property Name="CLS_ID" Type="varchar" MaxLength="1" />
+          <Property Name="PWD" Type="varchar" MaxLength="20" />
+          <Property Name="NOTES_ID" Type="varchar" MaxLength="10" />
+          <Property Name="CREATOR_ID" Type="varchar" MaxLength="20" />
+          <Property Name="CREATE_TIME" Type="varchar" MaxLength="15" />
+          <Property Name="MODIFIER_ID" Type="varchar" MaxLength="20" />
+          <Property Name="MODIFY_TIME" Type="varchar" MaxLength="15" />
+          <Property Name="FAC_ID" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ApkName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="VerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="VerCode" Type="int" Nullable="false" />
+          <Property Name="ReleaseNote" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="IsForceUpdate" Type="bit" Nullable="false" />
+          <Property Name="DateReleased" Type="datetime" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="QIS_NEWModelStoreContainer">
+          <EntitySet Name="T_II_HANG_SILK_DETAIL" EntityType="Self.T_II_HANG_SILK_DETAIL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_II_HANG_SILK_MASTER" EntityType="Self.T_II_HANG_SILK_MASTER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_II_PROD_TIME" EntityType="Self.T_II_PROD_TIME" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_II_START_NEW" EntityType="Self.T_II_START_NEW" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_III_MACHINE_CHECK" EntityType="Self.T_III_MACHINE_CHECK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_III_MACHINE_EXCEPTION" EntityType="Self.T_III_MACHINE_EXCEPTION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_III_PROD_SILK_LEN_TIME" EntityType="Self.T_III_PROD_SILK_LEN_TIME" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_USER" EntityType="Self.T_USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Version" EntityType="Self.Version" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QIS_NEWModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_II_PROD_TIME">
+          <Key>
+            <PropertyRef Name="FAC_ID" />
+            <PropertyRef Name="PROD_NO" />
+          </Key>
+          <Property Name="FAC_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PROD_NO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PROD_TIME" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_II_START_NEW">
+          <Key>
+            <PropertyRef Name="FAC_ID" />
+            <PropertyRef Name="TWISTING_MACH_NO" />
+            <PropertyRef Name="START_NO" />
+          </Key>
+          <Property Name="FAC_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TWISTING_MACH_NO" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="START_TM" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CREATOR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFIER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="START_NO" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UP_SILK_NO" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Name="FALL_SERIAL" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_USER">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CLS_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PWD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NOTES_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CREATOR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CREATE_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFIER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFY_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="FAC_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="QIS_NEWEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_II_PROD_TIME" EntityType="Self.T_II_PROD_TIME" />
+          <EntitySet Name="T_II_START_NEW" EntityType="Self.T_II_START_NEW" />
+          <EntitySet Name="T_USER" EntityType="Self.T_USER" />
+          <EntitySet Name="T_II_HANG_SILK_DETAIL" EntityType="QIS_NEWModel.T_II_HANG_SILK_DETAIL" />
+          <EntitySet Name="T_II_HANG_SILK_MASTER" EntityType="QIS_NEWModel.T_II_HANG_SILK_MASTER" />
+          <EntitySet Name="T_III_PROD_SILK_LEN_TIME" EntityType="QIS_NEWModel.T_III_PROD_SILK_LEN_TIME" />
+          <EntitySet Name="T_III_MACHINE_CHECK" EntityType="QIS_NEWModel.T_III_MACHINE_CHECK" />
+          <EntitySet Name="T_III_MACHINE_EXCEPTION" EntityType="QIS_NEWModel.T_III_MACHINE_EXCEPTION" />
+          <EntitySet Name="Version" EntityType="QIS_NEWModel.Version" />
+        </EntityContainer>
+        <EntityType Name="T_II_HANG_SILK_DETAIL">
+          <Key>
+            <PropertyRef Name="UP_SILK_NO" />
+            <PropertyRef Name="RGE_FLAG_NO" />
+          </Key>
+          <Property Name="UP_SILK_NO" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="true" />
+          <Property Name="RGE_FLAG_NO" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CAR_NO" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="PROD_NO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CREATOR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFIER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CHECK_NO" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_II_HANG_SILK_MASTER">
+          <Key>
+            <PropertyRef Name="UP_SILK_NO" />
+          </Key>
+          <Property Name="UP_SILK_NO" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="true" />
+          <Property Name="TWISTING_MACH_NO" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="FALL_SERIAL" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="FAC_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="OLD_TWISTING_MACH_NO" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="CREATOR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFIER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_III_PROD_SILK_LEN_TIME">
+          <Key>
+            <PropertyRef Name="FAC_ID" />
+            <PropertyRef Name="PROD_SPEC" />
+          </Key>
+          <Property Name="FAC_ID" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PROD_SPEC" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SILK_LENGTH" Type="Int32" Nullable="false" />
+          <Property Name="SILK_MINS" Type="Int32" Nullable="false" />
+          <Property Name="CREATOR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CREATE_TIME" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFIER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFY_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_III_MACHINE_CHECK">
+          <Key>
+            <PropertyRef Name="SEQ_NO" />
+          </Key>
+          <Property Name="SEQ_NO" Type="Guid" Nullable="false" />
+          <Property Name="FAC_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="TWISTING_MACH_NO" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="RGE_FLAG_NO" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="EXCEPTION_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="EXCEPTION_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="EXCEPTION_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="EXCEPTION_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="REPAIR_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="REPAIR_PERSON" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CONFIRM_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CONFIRM_PERSON" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TRANS_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="TRANS_PERSON" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_III_MACHINE_EXCEPTION">
+          <Key>
+            <PropertyRef Name="EXCEPTION_ID" />
+          </Key>
+          <Property Name="EXCEPTION_ID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="EXCEPTION_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CREATE_TIME" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFIER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFY_TIME" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="EXCEPTION_COUNT" Type="Int32" />
+          <Property Name="SERIAL_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CREATOR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ApkName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VerName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VerCode" Type="Int32" Nullable="false" />
+          <Property Name="ReleaseNote" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IsForceUpdate" Type="Boolean" Nullable="false" />
+          <Property Name="DateReleased" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QIS_NEWModelStoreContainer" CdmEntityContainer="QIS_NEWEntities">
+          <EntitySetMapping Name="T_II_PROD_TIME">
+            <EntityTypeMapping TypeName="QIS_NEWModel.T_II_PROD_TIME">
+              <MappingFragment StoreEntitySet="T_II_PROD_TIME">
+                <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+                <ScalarProperty Name="PROD_NO" ColumnName="PROD_NO" />
+                <ScalarProperty Name="PROD_TIME" ColumnName="PROD_TIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_II_START_NEW">
+            <EntityTypeMapping TypeName="QIS_NEWModel.T_II_START_NEW">
+              <MappingFragment StoreEntitySet="T_II_START_NEW">
+                <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+                <ScalarProperty Name="TWISTING_MACH_NO" ColumnName="TWISTING_MACH_NO" />
+                <ScalarProperty Name="START_TM" ColumnName="START_TM" />
+                <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="START_NO" ColumnName="START_NO" />
+                <ScalarProperty Name="UP_SILK_NO" ColumnName="UP_SILK_NO" />
+                <ScalarProperty Name="FALL_SERIAL" ColumnName="FALL_SERIAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_USER">
+            <EntityTypeMapping TypeName="QIS_NEWModel.T_USER">
+              <MappingFragment StoreEntitySet="T_USER">
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+                <ScalarProperty Name="CLS_ID" ColumnName="CLS_ID" />
+                <ScalarProperty Name="PWD" ColumnName="PWD" />
+                <ScalarProperty Name="NOTES_ID" ColumnName="NOTES_ID" />
+                <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_II_HANG_SILK_DETAIL">
+            <EntityTypeMapping TypeName="QIS_NEWModel.T_II_HANG_SILK_DETAIL">
+              <MappingFragment StoreEntitySet="T_II_HANG_SILK_DETAIL">
+                <ScalarProperty Name="CHECK_NO" ColumnName="CHECK_NO" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+                <ScalarProperty Name="PROD_NO" ColumnName="PROD_NO" />
+                <ScalarProperty Name="CAR_NO" ColumnName="CAR_NO" />
+                <ScalarProperty Name="RGE_FLAG_NO" ColumnName="RGE_FLAG_NO" />
+                <ScalarProperty Name="UP_SILK_NO" ColumnName="UP_SILK_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_II_HANG_SILK_MASTER">
+            <EntityTypeMapping TypeName="QIS_NEWModel.T_II_HANG_SILK_MASTER">
+              <MappingFragment StoreEntitySet="T_II_HANG_SILK_MASTER">
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+                <ScalarProperty Name="OLD_TWISTING_MACH_NO" ColumnName="OLD_TWISTING_MACH_NO" />
+                <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+                <ScalarProperty Name="FALL_SERIAL" ColumnName="FALL_SERIAL" />
+                <ScalarProperty Name="TWISTING_MACH_NO" ColumnName="TWISTING_MACH_NO" />
+                <ScalarProperty Name="UP_SILK_NO" ColumnName="UP_SILK_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_III_PROD_SILK_LEN_TIME">
+            <EntityTypeMapping TypeName="QIS_NEWModel.T_III_PROD_SILK_LEN_TIME">
+              <MappingFragment StoreEntitySet="T_III_PROD_SILK_LEN_TIME">
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="CREATOR_ID" ColumnName="CREATOR_ID" />
+                <ScalarProperty Name="SILK_MINS" ColumnName="SILK_MINS" />
+                <ScalarProperty Name="SILK_LENGTH" ColumnName="SILK_LENGTH" />
+                <ScalarProperty Name="PROD_SPEC" ColumnName="PROD_SPEC" />
+                <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_III_MACHINE_CHECK">
+            <EntityTypeMapping TypeName="QIS_NEWModel.T_III_MACHINE_CHECK">
+              <MappingFragment StoreEntitySet="T_III_MACHINE_CHECK">
+                <ScalarProperty Name="TRANS_PERSON" ColumnName="TRANS_PERSON" />
+                <ScalarProperty Name="TRANS_TIME" ColumnName="TRANS_TIME" />
+                <ScalarProperty Name="CONFIRM_PERSON" ColumnName="CONFIRM_PERSON" />
+                <ScalarProperty Name="CONFIRM_TIME" ColumnName="CONFIRM_TIME" />
+                <ScalarProperty Name="REPAIR_PERSON" ColumnName="REPAIR_PERSON" />
+                <ScalarProperty Name="REPAIR_TIME" ColumnName="REPAIR_TIME" />
+                <ScalarProperty Name="EXCEPTION_NAME" ColumnName="EXCEPTION_NAME" />
+                <ScalarProperty Name="EXCEPTION_ID" ColumnName="EXCEPTION_ID" />
+                <ScalarProperty Name="EXCEPTION_TYPE" ColumnName="EXCEPTION_TYPE" />
+                <ScalarProperty Name="EXCEPTION_TIME" ColumnName="EXCEPTION_TIME" />
+                <ScalarProperty Name="RGE_FLAG_NO" ColumnName="RGE_FLAG_NO" />
+                <ScalarProperty Name="TWISTING_MACH_NO" ColumnName="TWISTING_MACH_NO" />
+                <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+                <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_III_MACHINE_EXCEPTION">
+            <EntityTypeMapping TypeName="QIS_NEWModel.T_III_MACHINE_EXCEPTION">
+              <MappingFragment StoreEntitySet="T_III_MACHINE_EXCEPTION">
+                <ScalarProperty Name="CREATOR" ColumnName="CREATOR" />
+                <ScalarProperty Name="SERIAL_ID" ColumnName="SERIAL_ID" />
+                <ScalarProperty Name="EXCEPTION_COUNT" ColumnName="EXCEPTION_COUNT" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="MODIFIER_ID" ColumnName="MODIFIER_ID" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="EXCEPTION_NAME" ColumnName="EXCEPTION_NAME" />
+                <ScalarProperty Name="EXCEPTION_ID" ColumnName="EXCEPTION_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Version">
+            <EntityTypeMapping TypeName="QIS_NEWModel.Version">
+              <MappingFragment StoreEntitySet="Version">
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="DateReleased" ColumnName="DateReleased" />
+                <ScalarProperty Name="IsForceUpdate" ColumnName="IsForceUpdate" />
+                <ScalarProperty Name="ReleaseNote" ColumnName="ReleaseNote" />
+                <ScalarProperty Name="VerCode" ColumnName="VerCode" />
+                <ScalarProperty Name="VerName" ColumnName="VerName" />
+                <ScalarProperty Name="ApkName" ColumnName="ApkName" />
+                <ScalarProperty Name="AppName" ColumnName="AppName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

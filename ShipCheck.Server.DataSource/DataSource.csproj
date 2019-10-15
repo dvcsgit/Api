@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBA9373F-53C2-4BD8-AA74-42ECE9AE4934}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShipCheck.Server.DataSource</RootNamespace>
+    <AssemblyName>ShipCheck.Server.DataSource</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqKit, Version=1.1.2.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\packages\LINQKit.1.1.2\lib\net45\LinqKit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookingCar.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCar.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingCar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingCar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BookingCarSSIS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCarSSIS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingCarSSIS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCarSSIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingCarSSIS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCarSSIS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PFGCheckE.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PFGCheckE.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PFGCheckE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PFGCheckE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PFGCheckE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PFGCheckE.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QIS_NEW.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QIS_NEW.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QIS_NEW.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QIS_NEW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QIS_NEW.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="T_III_MACHINE_CHECK.cs">
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_III_MACHINE_EXCEPTION.cs">
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_III_PROD_SILK_LEN_TIME.cs">
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_II_HANG_SILK_DETAIL.cs">
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_II_HANG_SILK_MASTER.cs">
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_II_PROD_TIME.cs">
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_II_START_NEW.cs">
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_USER.cs">
+      <DependentUpon>QIS_NEW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>BookingCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v28caxrf_s2.cs">
+      <DependentUpon>BookingCarSSIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V28EFQ7J.cs">
+      <DependentUpon>BookingCarSSIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Version.cs">
+      <DependentUpon>BookingCar.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="QIS_NEW.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QIS_NEW.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="BookingCar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookingCar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BookingCar.edmx.diagram">
+      <DependentUpon>BookingCar.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="BookingCarSSIS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookingCarSSIS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BookingCarSSIS.edmx.diagram">
+      <DependentUpon>BookingCarSSIS.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="PFGCheckE.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PFGCheckE.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PFGCheckE.edmx.diagram">
+      <DependentUpon>PFGCheckE.edmx</DependentUpon>
+    </None>
+    <None Include="QIS_NEW.edmx.diagram">
+      <DependentUpon>QIS_NEW.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BookingCar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookingCar.edmx</DependentUpon>
+      <LastGenOutput>BookingCar.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BookingCar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookingCar.edmx</DependentUpon>
+      <LastGenOutput>BookingCar.cs</LastGenOutput>
+    </Content>
+    <Content Include="BookingCarSSIS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookingCarSSIS.edmx</DependentUpon>
+      <LastGenOutput>BookingCarSSIS.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BookingCarSSIS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookingCarSSIS.edmx</DependentUpon>
+      <LastGenOutput>BookingCarSSIS.cs</LastGenOutput>
+    </Content>
+    <Content Include="PFGCheckE.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PFGCheckE.edmx</DependentUpon>
+      <LastGenOutput>PFGCheckE.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PFGCheckE.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PFGCheckE.edmx</DependentUpon>
+      <LastGenOutput>PFGCheckE.cs</LastGenOutput>
+    </Content>
+    <Content Include="QIS_NEW.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QIS_NEW.edmx</DependentUpon>
+      <LastGenOutput>QIS_NEW.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QIS_NEW.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QIS_NEW.edmx</DependentUpon>
+      <LastGenOutput>QIS_NEW.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

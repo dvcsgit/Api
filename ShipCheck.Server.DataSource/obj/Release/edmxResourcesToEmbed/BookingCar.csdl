@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookingCarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="DateLastLogin" Type="DateTime" Precision="3" />
+    <Property Name="DateLastActivity" Type="DateTime" Precision="3" />
+    <Property Name="IsEnabled" Type="Boolean" />
+    <Property Name="IsActivated" Type="Boolean" />
+    <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Ext" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Contact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="BookingCarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Version" EntityType="BookingCarModel.Version" />
+  </EntityContainer>
+  <EntityType Name="Version">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ApkName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VerName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VerCode" Type="Int32" Nullable="false" />
+    <Property Name="ReleaseNote" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsForceUpdate" Type="Boolean" Nullable="false" />
+    <Property Name="DateReleased" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>
